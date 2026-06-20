@@ -1,0 +1,18 @@
+# Raw node data — large files, reproducible via scripts/download_zenodo.py
+data/raw/zenodo/*.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

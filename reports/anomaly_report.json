@@ -1,0 +1,959 @@
+[
+  {
+    "node": "R1S0.23T2",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      }
+    ]
+  },
+  {
+    "node": "R1S0.23T3",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 15,
+        "max_kwh": 28.567,
+        "timestamps": [
+          "2020-06-13 00:00",
+          "2020-06-20 00:00",
+          "2020-08-08 00:00",
+          "2020-08-09 00:00",
+          "2020-08-10 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.23T4",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 13,
+        "max_kwh": 61.626,
+        "timestamps": [
+          "2021-09-16 00:00",
+          "2021-10-10 00:00",
+          "2021-10-13 00:00",
+          "2021-10-15 00:00",
+          "2021-10-16 00:00"
+        ]
+      },
+      {
+        "type": "extended_zero_consumption",
+        "runs": 2
+      }
+    ]
+  },
+  {
+    "node": "R1S0.23T5",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 1,
+        "max_kwh": 110.35,
+        "timestamps": [
+          "2021-02-20 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T10",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 4,
+        "max_kwh": 7.3,
+        "timestamps": [
+          "2021-01-22 00:00",
+          "2021-01-23 00:00",
+          "2021-10-02 00:00",
+          "2021-10-04 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T11",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 1,
+        "max_kwh": 38.575,
+        "timestamps": [
+          "2021-02-23 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T12",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 1,
+        "max_kwh": 9.508,
+        "timestamps": [
+          "2019-12-03 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T13",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 46,
+        "max_kwh": 12.903,
+        "timestamps": [
+          "2019-06-07 00:00",
+          "2019-07-26 00:00",
+          "2019-07-27 00:00",
+          "2019-07-28 00:00",
+          "2019-07-29 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T14",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 14,
+        "max_kwh": 35.376,
+        "timestamps": [
+          "2019-05-03 00:00",
+          "2019-05-04 00:00",
+          "2019-05-05 00:00",
+          "2019-05-06 00:00",
+          "2019-05-11 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T15",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 30,
+        "max_kwh": 16.858,
+        "timestamps": [
+          "2019-05-11 00:00",
+          "2019-05-12 00:00",
+          "2019-05-13 00:00",
+          "2020-03-28 00:00",
+          "2020-11-22 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T16",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 27,
+        "max_kwh": 5.59,
+        "timestamps": [
+          "2019-03-27 00:00",
+          "2019-04-16 00:00",
+          "2019-10-19 00:00",
+          "2019-11-09 00:00",
+          "2019-11-10 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T17",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 3,
+        "max_kwh": 3.34,
+        "timestamps": [
+          "2019-03-01 00:00",
+          "2019-04-01 00:00",
+          "2019-04-02 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T18",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 51,
+        "max_kwh": 7.978,
+        "timestamps": [
+          "2019-09-10 00:00",
+          "2019-11-08 00:00",
+          "2019-11-30 00:00",
+          "2019-12-01 00:00",
+          "2019-12-02 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T19",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 1,
+        "max_kwh": 7.996,
+        "timestamps": [
+          "2021-01-17 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T20",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 25,
+        "max_kwh": 154.6,
+        "timestamps": [
+          "2019-10-06 00:00",
+          "2019-12-04 00:00",
+          "2021-01-30 00:00",
+          "2021-02-01 00:00",
+          "2021-02-02 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T21",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 24,
+        "max_kwh": 28.805,
+        "timestamps": [
+          "2019-04-07 00:00",
+          "2019-07-30 00:00",
+          "2019-09-08 00:00",
+          "2019-11-03 00:00",
+          "2019-12-20 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T22",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 9,
+        "max_kwh": 9.595,
+        "timestamps": [
+          "2019-06-27 00:00",
+          "2019-07-02 00:00",
+          "2019-08-13 00:00",
+          "2019-11-11 00:00",
+          "2020-09-15 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T23",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T24",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T25",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 11,
+        "max_kwh": 3.668,
+        "timestamps": [
+          "2019-11-27 00:00",
+          "2019-11-28 00:00",
+          "2019-12-04 00:00",
+          "2019-12-06 00:00",
+          "2019-12-11 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T26",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 47,
+        "max_kwh": 2.45,
+        "timestamps": [
+          "2020-12-08 00:00",
+          "2020-12-09 00:00",
+          "2020-12-10 00:00",
+          "2021-01-20 00:00",
+          "2021-01-26 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T27",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 1,
+        "max_kwh": 1.27,
+        "timestamps": [
+          "2020-09-23 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T28",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 32,
+        "max_kwh": 4.82,
+        "timestamps": [
+          "2019-04-05 00:00",
+          "2019-04-11 00:00",
+          "2019-04-24 00:00",
+          "2019-04-30 00:00",
+          "2019-05-23 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T29",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 16,
+        "max_kwh": 3.55,
+        "timestamps": [
+          "2019-04-30 00:00",
+          "2019-05-21 00:00",
+          "2019-05-22 00:00",
+          "2019-10-20 00:00",
+          "2019-10-21 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T30",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T31",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T32",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 31,
+        "max_kwh": 1.28,
+        "timestamps": [
+          "2019-03-26 00:00",
+          "2019-05-17 00:00",
+          "2019-05-24 00:00",
+          "2019-06-19 00:00",
+          "2019-07-09 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T33",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 6,
+        "max_kwh": 7.686,
+        "timestamps": [
+          "2020-05-08 00:00",
+          "2020-08-27 00:00",
+          "2020-12-22 00:00",
+          "2021-04-03 00:00",
+          "2021-06-09 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T34",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 6,
+        "max_kwh": 1.11,
+        "timestamps": [
+          "2019-04-03 00:00",
+          "2020-09-03 00:00",
+          "2021-01-30 00:00",
+          "2021-01-31 00:00",
+          "2021-02-01 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T35",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 36,
+        "max_kwh": 19.2,
+        "timestamps": [
+          "2019-03-05 00:00",
+          "2019-03-23 00:00",
+          "2019-03-28 00:00",
+          "2019-04-01 00:00",
+          "2019-04-03 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T36",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 11,
+        "max_kwh": 10.137,
+        "timestamps": [
+          "2019-03-12 00:00",
+          "2019-03-27 00:00",
+          "2019-07-01 00:00",
+          "2019-07-21 00:00",
+          "2019-07-22 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T37",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T38",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 62,
+        "max_kwh": 0.68,
+        "timestamps": [
+          "2019-06-07 00:00",
+          "2019-10-16 00:00",
+          "2019-10-17 00:00",
+          "2019-10-18 00:00",
+          "2019-10-22 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T39",
+    "records": 15594,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 677
+      },
+      {
+        "type": "spikes",
+        "count": 613,
+        "max_kwh": 9.3,
+        "timestamps": [
+          "2020-05-11 19:00",
+          "2020-05-11 20:00",
+          "2020-05-11 21:00",
+          "2020-05-11 22:00",
+          "2020-05-12 13:00"
+        ]
+      },
+      {
+        "type": "extended_zero_consumption",
+        "runs": 1
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T40",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 7,
+        "max_kwh": 117.674,
+        "timestamps": [
+          "2019-04-24 00:00",
+          "2020-02-13 00:00",
+          "2020-02-18 00:00",
+          "2020-02-20 00:00",
+          "2020-03-04 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T41",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 2,
+        "max_kwh": 78.53,
+        "timestamps": [
+          "2019-07-24 00:00",
+          "2019-08-08 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T42",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 16,
+        "max_kwh": 42.949,
+        "timestamps": [
+          "2021-01-05 00:00",
+          "2021-11-03 00:00",
+          "2021-11-26 00:00",
+          "2021-11-30 00:00",
+          "2021-12-01 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T43",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 2,
+        "max_kwh": 78.53,
+        "timestamps": [
+          "2019-07-24 00:00",
+          "2019-08-08 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T44",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 16,
+        "max_kwh": 42.949,
+        "timestamps": [
+          "2021-01-05 00:00",
+          "2021-11-03 00:00",
+          "2021-11-26 00:00",
+          "2021-11-30 00:00",
+          "2021-12-01 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T7",
+    "records": 20654,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 897
+      },
+      {
+        "type": "spikes",
+        "count": 828,
+        "max_kwh": 40.95,
+        "timestamps": [
+          "2019-10-02 09:00",
+          "2019-10-02 10:00",
+          "2019-10-02 11:00",
+          "2019-10-02 12:00",
+          "2019-10-04 09:00"
+        ]
+      },
+      {
+        "type": "extended_zero_consumption",
+        "runs": 1
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T8",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 33,
+        "max_kwh": 32.25,
+        "timestamps": [
+          "2019-03-09 00:00",
+          "2019-03-10 00:00",
+          "2019-03-15 00:00",
+          "2019-05-12 00:00",
+          "2019-05-30 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R1S0.415T9",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 2,
+        "max_kwh": 9.336,
+        "timestamps": [
+          "2021-10-18 00:00",
+          "2021-12-05 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R2S0.415T3",
+    "records": 12788,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 555
+      }
+    ]
+  },
+  {
+    "node": "R2S0.415T4",
+    "records": 12788,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 555
+      },
+      {
+        "type": "spikes",
+        "count": 1,
+        "max_kwh": 295.615,
+        "timestamps": [
+          "2021-02-15 08:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R2S0.415T5",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 1,
+        "max_kwh": 4.224,
+        "timestamps": [
+          "2019-09-11 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R2S0.415T6",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      },
+      {
+        "type": "spikes",
+        "count": 9,
+        "max_kwh": 139.014,
+        "timestamps": [
+          "2019-05-06 00:00",
+          "2019-05-22 00:00",
+          "2019-06-04 00:00",
+          "2019-06-12 00:00",
+          "2019-06-25 00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "node": "R2S0.415T8",
+    "records": 1114,
+    "status": "ANOMALY",
+    "anomalies": [
+      {
+        "type": "missing_timestamps",
+        "count": 25576
+      }
+    ]
+  }
+]
