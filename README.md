@@ -8,6 +8,22 @@ Ingests real hourly electricity consumption from 47 grid nodes (2019–2022), ru
 
 ---
 
+## Why this matters for a grid company
+
+A distribution grid company like Føie manages hundreds of measurement nodes across its network. Every hour, each node records how much electricity flows through it. That raw data feeds into:
+
+- **Billing** — customers are charged based on metering data. Errors mean wrong invoices.
+- **Grid planning** — engineers decide where to upgrade cables and transformers based on load patterns. Bad data leads to wrong investments.
+- **Regulatory reporting** — NVE (Norwegian Energy Regulatory Authority) requires accurate consumption reporting. Missing or spiked data causes compliance issues.
+- **Emergency preparedness** — during outages, operators need to know which nodes went silent and when. Extended zeros are the first signal of a problem.
+- **Forecasting** — future load predictions are only as good as the historical data they train on. Uncleaned spikes and gaps corrupt any model.
+
+**This pipeline solves the first and most important problem: knowing what is wrong with your data before you trust it.**
+
+Without this step, all downstream work — dashboards, forecasts, planning tools — is built on a broken foundation.
+
+---
+
 ## Key findings
 
 After running the full pipeline on 109,726 hourly records across 47 grid nodes:
@@ -25,6 +41,59 @@ After running the full pipeline on 109,726 hourly records across 47 grid nodes:
 | Average hourly consumption | 240.6 kWh (all 47 nodes combined) |
 
 **The 100% anomaly rate is not a sign of bad data — it reflects a real-world distribution grid**: nodes were added at different times (some have only 30 days of data, others have 3 full years), creating systematic timestamp gaps that a data quality pipeline must detect and document before any downstream analysis.
+
+### What each finding means — and what should be done about it
+
+**1. Missing timestamps (47/47 nodes, 555–25,576 missing hours)**
+
+Every node has gaps. The 4 nodes in the `R1S0.23` group are missing ~25,576 hours each — meaning they only reported data for roughly 30 days out of 3 years. This is not a meter failure; it is a data integration gap. These nodes were deployed late or their data was not collected into the central system from day one.
+
+*What to do:* Flag all gaps in the database with a reason code (deployment gap vs. transmission error vs. meter fault). Do not use gap-affected nodes in aggregate consumption calculations without imputation or exclusion logic. Track gap trends over time — if a previously clean node starts developing gaps, it signals a connectivity or meter issue.
+
+---
+
+**2. Statistical spikes (39/47 nodes — worst: 295.6 kWh, 20× the node average)**
+
+A reading of 295.6 kWh when the node averages 14 kWh is not physically plausible for a residential distribution node. It is almost certainly a meter communication error, a bit-flip in transmission, or a one-time logging fault. Feeding this value into a billing system would overcharge the customer. Feeding it into a forecasting model would distort load predictions.
+
+*What to do:* Automatically flag all readings that exceed ±3 standard deviations from the node's rolling mean. Route flagged readings to a review queue before they enter billing or planning systems. In the short term, replace spikes with interpolated values for analytical use. Long term, trace each spike back to its source (meter firmware? SCADA integration? data transfer format?).
+
+---
+
+**3. Extended zero consumption (3 nodes — periods longer than 6 consecutive hours of zero)**
+
+Three nodes showed zero kWh for more than 6 consecutive hours. This could mean: (a) the building was genuinely empty (holiday, business closure), (b) the meter went offline, or (c) the data transfer failed silently. A grid company cannot distinguish these cases from data alone.
+
+*What to do:* Cross-reference with fault tickets and outage logs. If there is no registered fault and the customer is known to be active, trigger a field inspection. This is exactly the kind of automated alert that a well-designed data pipeline should generate — saving engineers hours of manual log review.
+
+---
+
+**4. No negative values (0/47 nodes)**
+
+Negative kWh values would indicate a node recording more electricity going out than coming in — impossible for a pure consumption node unless it has solar generation feeding back to the grid. The absence of negatives here confirms the dataset represents consumption-only nodes with no prosumers. This is a useful data validation checkpoint.
+
+---
+
+## Data quality framework — theory
+
+We consider six dimensions when assessing grid data quality: **completeness** (no missing timestamps), **validity** (no negative kWh), **consistency** (no duplicate records), **accuracy** (values within realistic ranges), **timeliness** (data arrives when expected), and **uniqueness** (no repeated rows). Tests applied include: missing timestamp detection, negative value flagging, Z-score spike detection, duplicate row checks, and extended-zero identification. These checks ensure data accurately reflects real grid consumption before any analysis or forecasting is performed.
+
+---
+
+## What this enables — next steps for a real grid operator
+
+Once the data quality layer is in place and gaps/spikes are documented, the following become possible:
+
+| Next capability | What it needs | Why it matters |
+|----------------|--------------|----------------|
+| **Load forecasting** | Clean historical consumption + weather data (already integrated) | Predict peak demand hours → avoid overloading transformers |
+| **Automated alerting** | This pipeline running on a schedule (e.g. daily cron job) | Detect node outages within hours, not days |
+| **Capacity planning** | Aggregated clean consumption trends per grid area | Decide where to upgrade cables before they fail |
+| **Prosumer integration** | Add sign-aware detection (negative kWh = solar feed-in) | Norway's growing rooftop solar changes grid load patterns |
+| **Regulatory export** | Validated, gap-documented dataset → NVE reporting format | Compliance without manual spreadsheet work |
+| **SCADA/OT integration** | Connect this pipeline to real-time operational data | Merge metering data with live grid state for full situational awareness |
+
+The pipeline in this repository is the **foundation layer** — data quality and integration — that all of the above depend on.
 
 ---
 
